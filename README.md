@@ -17,7 +17,7 @@ pip install pyrrencies
 ```python
 from pyrrencies import CurrencyAmount
 
-amount_usd = CurrencyAmount(1000, 'USD')  # USD 10.0
+amount_usd = CurrencyAmount(1000, 'USD')   # USD 10.0
 amount_uah = CurrencyAmount(10000, 'UAH')  # UAH 100.0
 ```
 
@@ -30,7 +30,7 @@ print(amount_usd)  # USD 10.0
 ### Accessing Properties
 
 ```python
-print(amount_usd.cents)  # 1000
+print(amount_usd.cents)     # 1000
 print(amount_usd.currency)  # USD
 ```
 
@@ -46,19 +46,19 @@ print(amount_usd.to('EUR'))  # EUR 9.55
 ```python
 from pyrrencies import CurrencyRates
 
-print(CurrencyRates.get_rate('USD', 'UAH')) # 36.744452
-print(CurrencyRates.get_rate('PLN', 'EUR')) # 0.21633
+print(CurrencyRates.get_rate('USD', 'UAH'))  # 36.744452
+print(CurrencyRates.get_rate('PLN', 'EUR'))  # 0.21633
 ```
 
 ### Arithmetic Operations
 
 ```python
-print(amount_usd + 50)  # USD 10.5
-print(amount_usd + amount_uah)  # ValueError: Currencies must be the same
-print(amount_usd + amount_uah.to('USD')) # USD 12.72
-print(amount_usd - amount_uah.to('USD')) # USD 7.28
-print(amount_usd * 7.34) # USD 73.4
-print(amount_usd / 2) # USD 5.0
+print(amount_usd + 50)                    # USD 10.5
+print(amount_usd + amount_uah)            # ValueError: Currencies must be the same
+print(amount_usd + amount_uah.to('USD'))  # USD 12.72
+print(amount_usd - amount_uah.to('USD'))  # USD 7.28
+print(amount_usd * 7.34)                  # USD 73.4
+print(amount_usd / 2)                     # USD 5.0
 ```
 
 ### Comparison
@@ -66,10 +66,10 @@ print(amount_usd / 2) # USD 5.0
 ```python
 print(amount_usd == amount_uah)  # False
 print(amount_usd != amount_uah)  # True
-print(amount_usd > amount_uah) # ValueError: Currencies must be the same
-print(amount_usd >= amount_uah) # ValueError: Currencies must be the same
-print(amount_usd < amount_uah) # ValueError: Currencies must be the same
-print(amount_usd <= amount_uah) # ValueError: Currencies must be the same
+print(amount_usd > amount_uah)   # ValueError: Currencies must be the same
+print(amount_usd >= amount_uah)  # ValueError: Currencies must be the same
+print(amount_usd < amount_uah)   # ValueError: Currencies must be the same
+print(amount_usd <= amount_uah)  # ValueError: Currencies must be the same
 ```
 
 ### Supported Currencies
