@@ -1,5 +1,7 @@
 # Pyrrencies Python Library
 
+[![Upload Python Package](https://github.com/de-jure/pyrrencies/actions/workflows/python-publish.yml/badge.svg)](https://github.com/de-jure/pyrrencies/actions/workflows/python-publish.yml)
+
 ## Overview
 
 The `pyrrencies` library provides a convenient way to handle currency conversion and arithmetic operations in Python. It supports a wide range of currencies and allows for easy conversion between them.
